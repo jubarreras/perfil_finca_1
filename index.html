@@ -81,59 +81,260 @@
                 border-radius: 8px;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             }
+
+        /* Nuevos estilos para botones de Like y Favoritos */
+        .like-favorite-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .like-favorite-buttons button {
+            padding: 8px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .like-favorite-buttons button:hover {
+            background-color: #f1c40f; /* Color amarillo para resaltar */
+            color: #ecf0f1;
+        }
+
+        /* Nueva sección de calificación y comentarios */
+        .rating-section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f1c40f; /* Color amarillo para la sección */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos para las estrellas */
+        .rating-stars {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .rating-stars input {
+            display: none;
+        }
+
+        .rating-stars label {
+            cursor: pointer;
+            font-size: 30px;
+            color: #ddd;
+            transition: color 0.3s ease;
+        }
+
+        .rating-stars label:hover,
+        .rating-stars input:checked + label {
+            color: #e74c3c;
+        }
+
+        /* Estilos para la barra de calificación promedio */
+        .average-rating-bar {
+            height: 20px;
+            background-color: #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .average-rating-progress {
+            height: 100%;
+            width: 50%; /* Porcentaje de calificación promedio */
+            background-color: #e74c3c;
+            transition: width 0.3s ease;
+        }
+
+        /* Estilos para el área de comentarios */
+        .comment-section {
+            margin-bottom: 20px;
+        }
+
+        .comment-section textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            resize: none;
+        }
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #FFCCCC; /* Tonalidad roja para encabezados */
+        }
+
+        tr:nth-child(even) {
+            background-color: #FFB6B6; /* Tonalidad roja más clara para filas pares */
+        }
+
+        tr:nth-child(odd) {
+            background-color: #FF9999; /* Tonalidad roja más oscura para filas impares */
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Finca Cacaotera "Nombre de la Finca"</h1>
-            <p>Encargado: Nombre del Encargado</p>
+            <h1>Finca Cacaotera "Villa Maria"</h1>
+            <p>Encargado: Arbey Arias</p>
         </header>
 
-        <!-- Nueva sección de Imágenes de la Finca -->
+        <!-- Nueva sección de Información General con botones de Like y Favoritos -->
         <section>
-            <h2>Imágenes de la Finca</h2>
-            <img src="ruta-a-la-primera-imagen.jpg" alt="Imagen de la Finca">
+            <h2>Información General</h2>
+            <div class="like-favorite-buttons">
+                <button id="likeButton">Like</button>
+                <button id="favoriteButton">Agregar a Favoritos</button>
+            </div>
+            <p><strong>Descripción:</strong> En la idílica vereda Damas Arriba en Caquetá, Colombia, se encuentra una encantadora finca cacaotera habitada por una comunidad dedicada de alrededor de 9 personas. La finca, rodeada de un clima tropical con una temperatura promedio de 25-30 grados Celsius y una elevada humedad relativa, destaca por sus métodos artesanales en todas las fases del cultivo y producción de cacao...</p>
+            <img src="C:\Users\bjuan\OneDrive\Escritorio\Perfil_finca\finca_cacaotera.jpg" alt="Imagen de la Finca">
             <!-- El resto de la información en esta sección -->
-            <p><strong>Ubicación:</strong> <a href="enlace a Google Maps" target="_blank">Ubicación en Google Maps</a></p>
-            <p><strong>Variedad de Cacao:</strong> Tipo de cacao</p>
-            <p><strong>Porcentajes de Áreas:</strong> Detalles sobre la distribución de áreas</p>
+            <p><strong>Ubicación:</strong> La finca está ubicada en la Vereda Damas Arriba, del municipio Florencia en Caquetá <br> <a href="enlace a Google Maps" target="_blank">Ubicación en Google Maps</a></p>
+            <img src="C:\Users\bjuan\OneDrive\Escritorio\Perfil_finca\imagen_maps.png" alt="Imagen de la ubicacion de la finca en maps" width="600" height="400">
+            <p>
+                <strong>Variedad de Cacao:</strong> Este cacao, conocido localmente como "Tabasco Brillante", es cultivado con esmero y dedicación por agricultores comprometidos con la preservación de las tradiciones ancestrales. El proceso artesanal comienza con la selección cuidadosa de las semillas, seguido de una siembra manual que refleja el respeto por la tierra y sus ciclos naturales...
+            </p>
+            <p><strong>Porcentajes de Áreas:</strong> abarca un extenso terreno de alrededor de 50 hectáreas, caracterizado por su topografía ondulante que incluye colinas y valles fértiles. Con altitudes fluctuantes entre los 800 y 1,200 metros sobre el nivel del mar, la finca ofrece condiciones óptimas para el cultivo de café y otros productos agrícolas de alta calidad...</p>
+            <img src="C:\Users\bjuan\OneDrive\Escritorio\Perfil_finca\imagen_satelital_finca.png" alt="Imagen de la ubicacion satelital en maps" width="600" height="400">
         </section>
 
         <section>
             <h2>Proyectos de Sostenibilidad</h2>
             <p><strong>Índices de Sostenibilidad:</strong> Detalles sobre los proyectos y sus índices</p>
-        </section>
-
-        <section>
-            <h2>Contacto</h2>
-            <p><strong>Número de Contacto:</strong> Teléfono de contacto</p>
+            <table>
+                <tr>
+                    <th>Índice de Sostenibilidad</th>
+                    <th>Descripción</th>
+                    <th>Puntuación (0-100)</th>
+                </tr>
+                <tr>
+                    <td>Uso de Agua</td>
+                    <td>Eficiencia en el uso del agua para riego y procesos</td>
+                    <td>85</td>
+                </tr>
+                <tr>
+                    <td>Biodiversidad</td>
+                    <td>Diversidad de flora y fauna en la finca</td>
+                    <td>92</td>
+                </tr>
+                <tr>
+                    <td>Energía Renovable</td>
+                    <td>Proporción de energía proveniente de fuentes renovables</td>
+                    <td>75</td>
+                </tr>
+                <tr>
+                    <td>Residuos Cero</td>
+                    <td>Gestión eficiente de residuos, reciclaje y compostaje</td>
+                    <td>88</td>
+                </tr>
+                <tr>
+                    <td>Prácticas Orgánicas</td>
+                    <td>Adherencia a métodos de cultivo orgánicos y naturales</td>
+                    <td>94</td>
+                </tr>
+                <tr>
+                    <td>Comunidades Locales</td>
+                    <td>Impacto positivo en las comunidades locales</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>Huella de Carbono</td>
+                    <td>Reducción de emisiones de gases de efecto invernadero</td>
+                    <td>80</td>
+                </tr>
+                <tr>
+                    <td>Certificaciones</td>
+                    <td>Número de certificaciones ambientales obtenidas</td>
+                    <td>96</td>
+                </tr>
+                <tr>
+                    <td>Eficiencia Energética</td>
+                    <td>Uso eficiente de energía en la producción y procesos</td>
+                    <td>82</td>
+                </tr>
+                <tr>
+                    <td>Educación Ambiental</td>
+                    <td>Programas educativos y de concienciación ambiental</td>
+                    <td>88</td>
+                </tr>
+            </table>
         </section>
 
         <section>
             <h2>Certificaciones Ambientales</h2>
-            <p>Detalles sobre certificaciones ambientales</p>
+            <p><a href="enlace a certificacion 1" target="_blank">Certificación Rainforest Alliance</a><br><a href="enlace a certificacion 2" target="_blank">Certificación UTZ</a><br><a href="enlace a certificacion 3" target="_blank">Certificación Carbono Neutral</a></p>
         </section>
 
-        <section>
-            <h2>Redes Sociales y Código QR</h2>
-            <p>Redes Sociales: Enlaces a redes sociales</p>
-            <img src="ruta-a-la-imagen-del-codigo-qr" alt="Código QR para acceder a la página">
-        </section>
+        <!-- Nueva sección de Calificación y Comentarios -->
+        <div class="rating-section">
+            <h2>Calificación y Comentarios</h2>
 
-        <div class="button-section">
-            <a href="#">Inicio</a>
-            <a href="#">Contactar al Productor</a>
-            <a href="#">Contactar al Grupo de Ingenieros</a>
-            <a href="#">Contactar a Red Cacaotera</a>
-            <a href="#">Leer Términos de Uso</a>
-            <a href="#">Normas Icontec</a>
+            <!-- Estrellas de calificación -->
+            <div class="rating-stars">
+                <input type="radio" name="rating" id="star5" />
+                <label for="star5">&#9733;</label>
+                <input type="radio" name="rating" id="star4" />
+                <label for="star4">&#9733;</label>
+                <input type="radio" name="rating" id="star3" />
+                <label for="star3">&#9733;</label>
+                <input type="radio" name="rating" id="star2" />
+                <label for="star2">&#9733;</label>
+                <input type="radio" name="rating" id="star1" />
+                <label for="star1">&#9733;</label>
+            </div>
+
+            <!-- Barra de calificación promedio -->
+            <div class="average-rating-bar">
+                <div class="average-rating-progress"></div>
+            </div>
+
+            <!-- Área de comentarios -->
+            <div class="comment-section">
+                <label for="comments">Comentarios:</label>
+                <textarea id="comments" rows="4" placeholder="Deja tus comentarios aquí..."></textarea>
+            </div>
         </div>
 
-        <div class="footer-images">
-            <img src="ruta-a-imagen1.jpg" alt="Imagen 1">
-            <img src="ruta-a-imagen2.jpg" alt="Imagen 2">
-        </div>
+        <!-- Resto del código -->
     </div>
+    <div class="button-section">
+        <a href="#">Inicio</a>
+        <a href="#">Contactar al Productor</a>
+        <a href="#">Comprar Cacao</a>
+        <a href="#">Contactar a Red Cacaotera</a>
+        <a href="#">Leer Términos de Uso</a>
+        <a href="#">Normas Icontec</a>
+    </div>
+
+    <div class="footer-images">
+        <img src="C:\Users\bjuan\OneDrive\Escritorio\Perfil_finca\unal_tpi.png" alt="Imagen 1" width="150" height="75">
+    <script>
+        // Aquí puedes agregar lógica para manejar los eventos de Like y Favoritos, si es necesario
+        document.getElementById('likeButton').addEventListener('click', function() {
+            // Agregar lógica para el botón de Like
+            alert('¡Like agregado!');
+        });
+
+        document.getElementById('favoriteButton').addEventListener('click', function() {
+            // Agregar lógica para el botón de Favoritos
+            alert('¡Agregado a Favoritos!');
+        });
+    </script>
 </body>
 </html>
